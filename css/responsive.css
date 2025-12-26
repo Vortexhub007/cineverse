@@ -1,0 +1,347 @@
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablettes et petits écrans (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    /* Grid 3 colonnes pour tablette */
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero__icon {
+        font-size: 10rem;
+    }
+    
+    .movie-details__header {
+        grid-template-columns: 300px 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer__content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Typography */
+    .hero__title {
+        font-size: 2.2rem;
+    }
+    
+    .hero__description {
+        font-size: 1rem;
+    }
+    
+    .features__title {
+        font-size: 2rem;
+    }
+    
+    .filters__title {
+        font-size: 1.5rem;
+    }
+    
+    /* Navigation mobile */
+    .nav__menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--color-bg-gray);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        transition: left 0.3s ease;
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .nav__menu.active {
+        left: 0;
+    }
+    
+    .nav__toggle {
+        display: block;
+    }
+    
+    /* Grid 2 colonnes pour tablette */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Filters responsive */
+    .filters__controls {
+        flex-direction: column;
+    }
+    
+    .sort {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .sort__select {
+        flex: 1;
+    }
+    
+    /* Movie details responsive */
+    .movie-details__header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .movie-details__poster {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .movie-details__meta {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .movie-details__rating {
+        justify-content: center;
+    }
+    
+    /* Footer responsive */
+    .footer__content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .footer__links {
+        align-items: center;
+    }
+    
+    .footer__social {
+        justify-content: center;
+    }
+}
+
+/* Smartphones (360px - 480px) */
+@media screen and (max-width: 480px) {
+    /* Spacing adjustments */
+    :root {
+        --spacing-xl: 2rem;
+        --spacing-xxl: 2.5rem;
+    }
+    
+    /* Typography */
+    body {
+        font-size: 14px;
+    }
+    
+    .hero__title {
+        font-size: 1.8rem;
+    }
+    
+    .hero__description {
+        font-size: 0.95rem;
+    }
+    
+    .features__title {
+        font-size: 1.6rem;
+    }
+    
+    .filters__title {
+        font-size: 1.3rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+    
+    /* Grid 1 colonne pour mobile */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Navigation */
+    .nav__logo {
+        font-size: 1.3rem;
+    }
+    
+    .nav__logo i {
+        font-size: 1.5rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: var(--spacing-sm);
+    }
+    
+    /* Hero section */
+    .hero {
+        padding: var(--spacing-xl) var(--spacing-sm);
+    }
+    
+    .hero__icon {
+        font-size: 8rem;
+    }
+    
+    /* Features */
+    .features {
+        padding: var(--spacing-xl) var(--spacing-sm);
+    }
+    
+    .feature-card {
+        padding: var(--spacing-md);
+    }
+    
+    .feature-card__icon {
+        font-size: 2.5rem;
+    }
+    
+    .feature-card__title {
+        font-size: 1.1rem;
+    }
+    
+    /* Filters */
+    .filters {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    .search__input {
+        font-size: 0.95rem;
+    }
+    
+    .sort__label {
+        font-size: 0.9rem;
+    }
+    
+    .sort__select {
+        font-size: 0.9rem;
+    }
+    
+    /* Cards */
+    .card__content {
+        padding: var(--spacing-sm);
+    }
+    
+    .card__title {
+        font-size: 1rem;
+    }
+    
+    .card__info {
+        font-size: 0.85rem;
+        gap: var(--spacing-sm);
+    }
+    
+    .card__description {
+        font-size: 0.85rem;
+    }
+    
+    /* Movie details */
+    .movie-details {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    
+    .movie-details__info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .movie-details__meta {
+        font-size: 0.85rem;
+        gap: var(--spacing-sm);
+    }
+    
+    .movie-details__rating {
+        font-size: 1.3rem;
+    }
+    
+    .movie-details__overview {
+        font-size: 0.95rem;
+    }
+    
+    .movie-details__section {
+        padding: var(--spacing-md);
+    }
+    
+    .movie-details__section h2 {
+        font-size: 1.4rem;
+    }
+    
+    /* Back section */
+    .back-section {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    /* Footer */
+    .footer {
+        padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .footer__title {
+        font-size: 1.3rem;
+    }
+    
+    .footer__text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Très petits écrans (< 360px) */
+@media screen and (max-width: 360px) {
+    .hero__title {
+        font-size: 1.5rem;
+    }
+    
+    .nav__container {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    .card__image-container {
+        padding-top: 140%;
+    }
+    
+    .movie-details__poster {
+        max-width: 100%;
+    }
+}
+
+/* Large screens (> 1400px) */
+@media screen and (min-width: 1400px) {
+    .grid {
+        gap: var(--spacing-xl);
+    }
+    
+    .features__grid {
+        gap: var(--spacing-xl);
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .footer,
+    .nav__toggle,
+    .filters,
+    .btn {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .movie-details__header {
+        page-break-inside: avoid;
+    }
+}
