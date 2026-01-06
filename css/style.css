@@ -661,5 +661,5 @@ button {
     text-align: center;
     padding-top: var(--spacing-lg);
     border-top: 1px solid var(--color-bg-light);
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
 }
