@@ -73,21 +73,21 @@ cineverse/
 │
 ├── .gitignore                # Fichiers exclus de Git
 ├── README.md                 # Documentation (ce fichier)
-└── presentation.pdf          # Support de présentation
 ```
 
 ---
 
 ## 🛠️ Technologies utilisées
 
-| Technologie | Version | Utilisation                   |   
-| HTML5       | 5       | Structure sémantique          |
-| CSS3        | 3       | Stylisation et mise en page   |
-| JavaScript  | ES6+    | Logique et interactivité      |
-| TMDB API    | v3      | Données des films             |
-| Font Awesome| 6.4.0   | Icônes                        |
-| Google Fonts| -       | Typographie (Poppins, Roboto) |
-| Git         | 2.51.2  | Gestion de versions           |
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![TMDB API](https://img.shields.io/badge/TMDB-01B4E4?style=flat&logo=themoviedatabase&logoColor=white)
+![Font Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=flat&logo=fontawesome&logoColor=white)
+![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?style=flat&logo=google&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+
+---
 
 ## ✨ Fonctionnalités principales
 
@@ -213,8 +213,6 @@ Le projet contient plus de 10 commits avec des messages clairs :
 ### Branches
 - `main` : Code de production
 - `develop` : Développement en cours
-- `feature/search` : Fonctionnalité de recherche
-- `feature/details` : Page de détails
 
 ---
 
