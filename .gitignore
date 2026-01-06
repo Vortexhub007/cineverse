@@ -1,0 +1,50 @@
+# Dépendances Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers système
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Fichiers d'IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Fichiers de build
+dist/
+build/
+*.log
+
+# Fichiers temporaires
+*.tmp
+*.temp
+.cache/
+
+# Fichiers de configuration sensibles
+.env
+.env.local
+.env.*.local
+config.local.js
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*~
+
+# Fichiers OS
+*.pyc
+__pycache__/
