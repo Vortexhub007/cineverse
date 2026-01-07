@@ -142,21 +142,29 @@ function initHomePage() {
 /**
  * Détecte la page actuelle et initialise la logique appropriée
  */
+/**
+ * Détecte la page actuelle et initialise la logique appropriée
+ */
 function initCurrentPage() {
     const currentPath = window.location.pathname;
-    const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
     
-    console.log('Page actuelle:', currentPage);
+    // On nettoie le chemin pour ne pas être gêné par le dossier /cineverse/ de GitHub
+    const isMoviesPage = currentPath.includes('movies.html');
+    const isDetailsPage = currentPath.includes('movie-details.html');
+    // On considère que c'est l'accueil si ce n'est ni "movies" ni "details"
+    const isHomePage = currentPath.includes('index.html') || (!isMoviesPage && !isDetailsPage);
+
+    console.log('Analyse du chemin:', currentPath);
     
     // Initialiser le menu mobile sur toutes les pages
     UI.initMobileMenu();
     
     // Initialiser la logique spécifique à chaque page
-    if (currentPage === 'movies.html' || currentPage === '') {
+    if (isMoviesPage) {
         initMoviesPage();
-    } else if (currentPage === 'movie-details.html') {
+    } else if (isDetailsPage) {
         initMovieDetailsPage();
-    } else if (currentPage === 'index.html' || currentPage === '/') {
+    } else if (isHomePage) {
         initHomePage();
     }
 }
