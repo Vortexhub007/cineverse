@@ -1,14 +1,12 @@
 # 🎬 CineVerse - Application de Découverte de Films
 
-![CineVerse Banner](https://via.placeholder.com/1200x300/e50914/ffffff?text=CineVerse)
-
 ## 📋 Description du projet
 
 **CineVerse** est une application web front-end moderne permettant de découvrir des films populaires, de rechercher par titre et de consulter les détails complets de chaque film. Ce projet a été développé dans le cadre de l'évaluation ECF du titre professionnel Développeur Web et Web Mobile (DWWM).
 
 L'application utilise l'API TMDB (The Movie Database) pour récupérer des données en temps réel sur des milliers de films, offrant une expérience utilisateur fluide et responsive sur tous les appareils.
 
-🔗 **Site déployé** : [https://votre-site.vercel.app](https://votre-site.vercel.app) *(À compléter après déploiement)*
+🔗 **Site déployé** : [https://cineverse-valentinmartin.vercel.app/](https://votre-site.vercel.app)
 
 ---
 
