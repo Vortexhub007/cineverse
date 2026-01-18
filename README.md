@@ -6,7 +6,7 @@
 
 L'application utilise l'API TMDB (The Movie Database) pour récupérer des données en temps réel sur des milliers de films, offrant une expérience utilisateur fluide et responsive sur tous les appareils.
 
-🔗 **Site déployé** : [https://cineverse-valentinmartin.vercel.app/](https://votre-site.vercel.app)
+🔗 **Site déployé** : [https://cineverse-valentinmartin.vercel.app/](https://cineverse-valentinmartin.vercel.app/)
 
 ---
 
@@ -34,16 +34,16 @@ Ce projet démontre la maîtrise des compétences suivantes :
 ## 📸 Captures d'écran
 
 ### Page d'accueil
-![Page d'accueil](https://via.placeholder.com/800x450/0f0f0f/ffffff?text=Page+Accueil)
+![Page d'accueil](/images/Capture-Accueil-Cineverse.png)
 
 ### Grille de films
-![Grille de films](https://via.placeholder.com/800x450/0f0f0f/ffffff?text=Grille+Films)
+![Grille de films](/images/Capture-Cataloguefilms-Cineverse.png)
 
 ### Page de détails
-![Page détails](https://via.placeholder.com/800x450/0f0f0f/ffffff?text=Details+Film)
+![Page détails](/images/Capture-Detailsfilms-Cineverse.png)
 
 ### Responsive mobile
-![Version mobile](https://via.placeholder.com/300x600/0f0f0f/ffffff?text=Mobile)
+![Version mobile](/images/Capture-VersionMobile-Cineverse.png*)
 
 ---
 
@@ -243,14 +243,14 @@ Avec plus de temps, j'aimerais ajouter :
 
 ## 👨‍💻 Auteur
 
-**Votre Nom**  
+**Valentin MARTIN**  
 Formation : Développeur Web et Web Mobile (DWWM)  
 Promotion : 2025-2026  
 Date de création : Décembre 2025
 
-📧 Email : [votre.email@example.com](mailto:votre.email@example.com)  
-🔗 GitHub : [@votre-username](https://github.com/votre-username)  
-💼 LinkedIn : [Votre Nom](https://www.linkedin.com/in/votre-profil)
+📧 Email : [contact.valentin69400@gmail.com](mailto:contact.valentin69400@gmail.com)  
+🔗 GitHub : [@Vortexhub007](https://github.com/Vortexhub007)  
+💼 LinkedIn : [Valentin MARTIN](https://www.linkedin.com/in/valentin-martin-web/)
 
 ---
 
