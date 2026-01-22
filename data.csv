@@ -1,0 +1,51 @@
+Nom de la donnée,Description,Type,Longueur,Contraintes,Exemple
+user_id,Identifiant unique de l'utilisateur,Nombre entier,,Clé primaire - Auto-incrémenté - Obligatoire,1
+user_email,Adresse email de l'utilisateur,Texte court,255,Unique - Obligatoire,cinema.fan@email.com
+user_password,Mot de passe hashé de l'utilisateur,Texte court,255,Obligatoire,$2y$10$abcdef123456
+user_username,Nom d'utilisateur public,Texte court,50,Unique - Obligatoire,cinephile_92
+user_first_name,Prénom de l'utilisateur,Texte court,100,Optionnel,Marie
+user_last_name,Nom de famille de l'utilisateur,Texte court,100,Optionnel,Dupont
+user_bio,Biographie courte de l'utilisateur,Texte long,,Optionnel,Passionnée de cinéma indépendant et de films d'auteur
+user_profile_picture,URL de la photo de profil,Texte court,500,Optionnel,https://cineverse.com/uploads/profiles/user1.jpg
+user_created_at,Date de création du compte,Date et heure,,Obligatoire,2025-01-21 14:30:00
+user_updated_at,Date de dernière modification du profil,Date et heure,,Optionnel,2025-01-21 15:45:00
+movie_id,Identifiant unique du film,Nombre entier,,Clé primaire - Auto-incrémenté - Obligatoire,1
+movie_title,Titre original du film,Texte court,200,Obligatoire,The Shawshank Redemption
+movie_title_fr,Titre français du film,Texte court,200,Optionnel,Les Évadés
+movie_synopsis,Résumé du film,Texte long,,Obligatoire,Andy Dufresne est condamné à perpétuité pour le meurtre de sa femme...
+movie_director,Nom du réalisateur,Texte court,150,Obligatoire,Frank Darabont
+movie_release_date,Date de sortie du film,Date,,Obligatoire,1994-09-23
+movie_duration,Durée du film en minutes,Nombre entier,,Obligatoire,142
+movie_poster_url,URL de l'affiche du film,Texte court,500,Optionnel,https://cineverse.com/posters/shawshank.jpg
+movie_trailer_url,URL de la bande-annonce,Texte court,500,Optionnel,https://youtube.com/watch?v=xyz123
+movie_rating,Note moyenne du film,Nombre décimal,,Optionnel - Valeur par défaut: 0,8.7
+movie_created_at,Date d'ajout du film dans la base,Date et heure,,Obligatoire,2025-01-15 10:00:00
+movie_updated_at,Date de dernière modification du film,Date et heure,,Optionnel,2025-01-20 11:30:00
+genre_id,Identifiant unique du genre,Nombre entier,,Clé primaire - Auto-incrémenté - Obligatoire,1
+genre_name,Nom du genre,Texte court,50,Unique - Obligatoire,Action
+genre_description,Description du genre,Texte long,,Optionnel,Films avec beaucoup de scènes d'action et de cascades
+genre_created_at,Date de création du genre,Date et heure,,Obligatoire,2025-01-10 09:00:00
+movie_genre_id,Identifiant de la relation film-genre,Nombre entier,,Clé primaire - Auto-incrémenté - Obligatoire,1
+movie_genre_movie_id,Référence vers le film,Nombre entier,,Clé étrangère - Obligatoire,5
+movie_genre_genre_id,Référence vers le genre,Nombre entier,,Clé étrangère - Obligatoire,2
+review_id,Identifiant unique de la critique,Nombre entier,,Clé primaire - Auto-incrémenté - Obligatoire,1
+review_user_id,Référence vers l'utilisateur auteur,Nombre entier,,Clé étrangère - Obligatoire,3
+review_movie_id,Référence vers le film critiqué,Nombre entier,,Clé étrangère - Obligatoire,12
+review_rating,Note attribuée par l'utilisateur,Nombre décimal,,Obligatoire,4.5
+review_title,Titre de la critique,Texte court,150,Optionnel,Un chef-d'oeuvre intemporel
+review_content,Contenu détaillé de la critique,Texte long,,Optionnel,Ce film est une véritable pépite du cinéma...
+review_is_spoiler,Indique si la critique contient des spoilers,Vrai/Faux,,Obligatoire - Valeur par défaut: false,false
+review_created_at,Date de publication de la critique,Date et heure,,Obligatoire,2025-01-21 16:00:00
+review_updated_at,Date de dernière modification,Date et heure,,Optionnel,2025-01-21 17:30:00
+watchlist_id,Identifiant unique de l'entrée watchlist,Nombre entier,,Clé primaire - Auto-incrémenté - Obligatoire,1
+watchlist_user_id,Référence vers l'utilisateur,Nombre entier,,Clé étrangère - Obligatoire,7
+watchlist_movie_id,Référence vers le film,Nombre entier,,Clé étrangère - Obligatoire,15
+watchlist_status,Statut du film dans la liste,Texte court,20,Obligatoire - Valeur par défaut: to_watch,watching
+watchlist_added_at,Date d'ajout à la liste,Date et heure,,Obligatoire,2025-01-19 12:00:00
+watchlist_watched_at,Date à laquelle le film a été vu,Date et heure,,Optionnel,2025-01-21 20:00:00
+comment_id,Identifiant unique du commentaire,Nombre entier,,Clé primaire - Auto-incrémenté - Obligatoire,1
+comment_user_id,Référence vers l'utilisateur auteur,Nombre entier,,Clé étrangère - Obligatoire,4
+comment_review_id,Référence vers la critique commentée,Nombre entier,,Clé étrangère - Obligatoire,8
+comment_content,Contenu du commentaire,Texte long,,Obligatoire,Je suis totalement d'accord avec ton analyse !
+comment_created_at,Date de publication du commentaire,Date et heure,,Obligatoire,2025-01-21 18:00:00
+comment_updated_at,Date de dernière modification,Date et heure,,Optionnel,2025-01-21 18:15:00
