@@ -13,13 +13,13 @@ export function filterMoviesBySearch(movies, searchTerm) {
     if (!searchTerm || searchTerm.trim() === '') {
         return movies;
     }
-    
+
     const term = searchTerm.toLowerCase().trim();
-    
+
     return movies.filter(movie => {
         const title = movie.title?.toLowerCase() || '';
         const overview = movie.overview?.toLowerCase() || '';
-        
+
         return title.includes(term) || overview.includes(term);
     });
 }
@@ -34,23 +34,23 @@ export function sortMovies(movies, sortBy) {
     if (!movies || movies.length === 0) {
         return movies;
     }
-    
+
     // Créer une copie du tableau pour ne pas modifier l'original
     const sortedMovies = [...movies];
-    
+
     switch (sortBy) {
         case 'popularity':
             // Tri par popularité décroissante
             return sortedMovies.sort((a, b) => {
                 return (b.popularity || 0) - (a.popularity || 0);
             });
-            
+
         case 'rating':
             // Tri par note décroissante
             return sortedMovies.sort((a, b) => {
                 return (b.vote_average || 0) - (a.vote_average || 0);
             });
-            
+
         case 'date':
             // Tri par date de sortie décroissante (plus récent en premier)
             return sortedMovies.sort((a, b) => {
@@ -58,7 +58,7 @@ export function sortMovies(movies, sortBy) {
                 const dateB = new Date(b.release_date || 0);
                 return dateB - dateA;
             });
-            
+
         case 'title':
             // Tri alphabétique par titre
             return sortedMovies.sort((a, b) => {
@@ -66,7 +66,7 @@ export function sortMovies(movies, sortBy) {
                 const titleB = (b.title || '').toLowerCase();
                 return titleA.localeCompare(titleB);
             });
-            
+
         default:
             return sortedMovies;
     }
@@ -82,10 +82,10 @@ export function sortMovies(movies, sortBy) {
 export function applyFiltersAndSort(movies, searchTerm, sortBy) {
     // D'abord filtrer
     let filteredMovies = filterMoviesBySearch(movies, searchTerm);
-    
+
     // Puis trier
     filteredMovies = sortMovies(filteredMovies, sortBy);
-    
+
     return filteredMovies;
 }
 
@@ -98,11 +98,11 @@ export function applyFiltersAndSort(movies, searchTerm, sortBy) {
  */
 export function debounce(func, delay = 300) {
     let timeoutId;
-    
-    return function(...args) {
+
+    return function (...args) {
         // Annuler le timeout précédent
         clearTimeout(timeoutId);
-        
+
         // Créer un nouveau timeout
         timeoutId = setTimeout(() => {
             func.apply(this, args);
@@ -122,25 +122,32 @@ export function initFilters({ searchInput, sortSelect, onFilter }) {
         console.error('Missing required elements for filter initialization');
         return;
     }
-    
+
     // Debounce pour la recherche (attend 300ms après la dernière saisie)
     const debouncedSearch = debounce((searchTerm, sortBy) => {
         onFilter(searchTerm, sortBy);
     }, 300);
-    
-    // Écouteur sur l'input de recherche
-    searchInput.addEventListener('input', (e) => {
+
+    const handleInput = (e) => {
         const searchTerm = e.target.value;
         const sortBy = sortSelect.value;
         debouncedSearch(searchTerm, sortBy);
-    });
-    
-    // Écouteur sur le select de tri
-    sortSelect.addEventListener('change', (e) => {
+    };
+
+    const handleChange = (e) => {
         const searchTerm = searchInput.value;
         const sortBy = e.target.value;
         onFilter(searchTerm, sortBy);
-    });
+    };
+
+    searchInput.addEventListener('input', handleInput);
+    sortSelect.addEventListener('change', handleChange);
+
+    // Retourner le cleanup
+    return function cleanup() {
+        searchInput.removeEventListener('input', handleInput);
+        sortSelect.removeEventListener('change', handleChange);
+    };
 }
 
 /**
@@ -152,7 +159,7 @@ export function resetFilters(searchInput, sortSelect) {
     if (searchInput) {
         searchInput.value = '';
     }
-    
+
     if (sortSelect) {
         sortSelect.value = 'popularity';
     }

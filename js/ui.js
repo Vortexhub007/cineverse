@@ -79,7 +79,7 @@ export function displayMovies(movies, container) {
         movieCard.className = 'movie-card';
         
         movieCard.innerHTML = `
-            <a href="movie-details.html?id=${movie.id}" class="movie-link">
+            <a href="movie-details.php?id=${movie.id}" class="movie-link">
                 <div class="movie-poster">
                     <img src="${API.getImageUrl(movie.poster_path)}" alt="${movie.title}" loading="lazy">
                     <div class="movie-rating">⭐ ${movie.vote_average.toFixed(1)}</div>

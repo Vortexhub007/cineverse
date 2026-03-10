@@ -12,7 +12,7 @@ let allMovies = [];
 let currentPage = 1;
 
 /**
- * Initialise la page movies.html
+ * Initialise la page movies.php
  */
 async function initMoviesPage() {
     console.log('Initialisation de la page films...');
@@ -152,12 +152,27 @@ function initCurrentPage() {
     UI.initMobileMenu();
     
     // Initialiser la logique spécifique à chaque page
-    if (currentPage === 'movies.html' || currentPage === '') {
-        initMoviesPage();
-    } else if (currentPage === 'movie-details.html') {
-        initMovieDetailsPage();
-    } else if (currentPage === 'index.html' || currentPage === '/') {
-        initHomePage();
+    switch (currentPage) {
+        case 'movies.php':
+        case 'movies.html':          // si vous gardez une ancienne version
+        case '':                     // accès racine sans nom de fichier
+            initMoviesPage();
+            break;
+
+        case 'movie-details.php':
+        case 'movie-details.html':   // ancien nom
+            initMovieDetailsPage();
+            break;
+
+        case 'index.php':
+        case 'index.html':
+        case '/':                    // accès racine via serveur
+            initHomePage();
+            break;
+
+        default:
+            // pas de logique spécifique
+            console.warn('Aucune initialisation pour la page', currentPage);
     }
 }
 
