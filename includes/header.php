@@ -15,38 +15,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css?v=<?= time(); ?>">
+    <link rel="stylesheet" href="css/responsive.css?v=<?= time(); ?>">
 </head>
 <body>
     <!-- Header avec Navigation -->
     <header class="header">
         <nav class="nav">
             <div class="nav__container">
-                <a href="index.php" class="nav__logo">
+                <a href="/cineverse/index.php" class="nav__logo">
                     <i class="fas fa-film"></i>
                     <span>CineVerse</span>
                 </a>
                 
                 <ul class="nav__menu">
                     <li class="nav__item">
-                        <a href="index.php" class="nav__link nav__link--active">
+                        <a href="/cineverse/index.php" class="nav__link nav__link--active">
                             <i class="fas fa-home"></i>
                             Accueil
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="movies.php" class="nav__link">
+                        <a href="/cineverse/movies.php" class="nav__link">
                             <i class="fas fa-video"></i>
                             Films
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
+                    <li class="nav__item" style="opacity: 0.5;">
+                        <a href="#" class="nav__link">
                             <i class="fas fa-info-circle"></i>
                             À propos
                         </a>
                     </li>
+                    <li class="nav__item">
+                        <a href="/cineverse/inscription.php" class="nav__link">
+                            <i class="fas fa-user-plus"></i>
+                            S'inscrire
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/cineverse/connexion.php" class="nav__link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Se connecter
+                        </a>
                 </ul>
                 
                 <!-- Menu burger pour mobile -->
