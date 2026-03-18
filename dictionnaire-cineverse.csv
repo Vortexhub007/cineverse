@@ -1,0 +1,35 @@
+table,champ,type,cle,nullable,description
+users,id,INT,PK,NON,Identifiant unique de l’utilisateur
+users,email,VARCHAR(255),UNIQUE,NON,Adresse email
+users,password_hash,VARCHAR(255),,NON,Mot de passe hashé
+users,username,VARCHAR(100),,OUI,Nom d’utilisateur
+users,role,ENUM('user','admin'),,NON,Rôle de l’utilisateur
+users,created_at,DATETIME,,NON,Date de création
+users,updated_at,DATETIME,,NON,Date de mise à jour
+
+movies,id,INT,PK,NON,Identifiant unique du film
+movies,api_id,VARCHAR(50),UNIQUE,NON,Identifiant externe (API/IMDb)
+movies,title,VARCHAR(255),,NON,Titre du film
+movies,poster_url,VARCHAR(255),,OUI,URL de l’affiche
+movies,release_date,DATE,,OUI,Date de sortie
+movies,created_at,DATETIME,,NON,Date d’ajout
+movies,updated_at,DATETIME,,NON,Date de mise à jour
+
+favorites,id,INT,PK,NON,Identifiant du favori
+favorites,user_id,INT,FK,NON,Référence utilisateur
+favorites,movie_id,INT,FK,NON,Référence film
+favorites,created_at,DATETIME,,NON,Date d’ajout
+
+watchlist,id,INT,PK,NON,Identifiant
+watchlist,user_id,INT,FK,NON,Référence utilisateur
+watchlist,movie_id,INT,FK,NON,Référence film
+watchlist,status,ENUM('to_watch','watching','watched'),,NON,Statut du film
+watchlist,added_at,DATETIME,,NON,Date d’ajout
+watchlist,watched_at,DATETIME,,OUI,Date de visionnage
+
+comments,id,INT,PK,NON,Identifiant du commentaire
+comments,user_id,INT,FK,NON,Référence utilisateur
+comments,movie_id,INT,FK,NON,Référence film
+comments,content,TEXT,,NON,Contenu du commentaire
+comments,rating,TINYINT,,OUI,Note entre 0 et 10
+comments,created_at,DATETIME,,NON,Date de création

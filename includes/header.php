@@ -31,7 +31,7 @@
                 <ul class="nav__menu">
                     <li class="nav__item">
                         <a href="/cineverse/index.php" class="nav__link nav__link--active">
-                            <i class="fas fa-home"></i>
+                            <i class="fa-solid fa-house"></i>
                             Accueil
                         </a>
                     </li>
@@ -41,8 +41,8 @@
                             Films
                         </a>
                     </li>
-                    <li class="nav__item" style="opacity: 0.5;">
-                        <a href="#" class="nav__link">
+                    <li class="nav__item">
+                        <a href="/cineverse/index.php#about" class="nav__link">
                             <i class="fas fa-info-circle"></i>
                             À propos
                         </a>

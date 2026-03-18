@@ -2,7 +2,7 @@
 require_once 'config.php';
 
 /**
- * CREATE - Ajouter un film
+ * ANCHOR CREATE - Ajouter un film
  */
 function createMovie($pdo, $api_id, $title, $poster_url = null, $release_date = null) {
     try {
@@ -167,7 +167,7 @@ function searchMovies($pdo, $search, $limit = 20) {
 }
 
 // ============================================
-// CRUD FAVORITES
+// ANCHOR CRUD FAVORITES
 // ============================================
 
 /**
@@ -279,7 +279,7 @@ function countUserFavorites($pdo, $user_id) {
 }
 
 // ============================================
-// CRUD WATCHLIST
+// ANCHOR CRUD WATCHLIST
 // ============================================
 
 /**
@@ -412,7 +412,7 @@ function isInWatchlist($pdo, $user_id, $movie_id) {
 }
 
 // ============================================
-// CRUD COMMENTS
+// ANCHOR CRUD COMMENTS
 // ============================================
 
 /**

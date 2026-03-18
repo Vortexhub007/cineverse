@@ -40,7 +40,7 @@
             </div>
 
             <div class="footer__bottom">
-                <p>&copy; 2025-2026 CineVerse. Projet ECF - Formation DWWM. Données fournies par TMDB.</p>
+                <p>&copy; 2025-2026 CineVerse. Projet ECF - Réaliser par Valentin Martin - Formation DWWM. Données fournies par TMDB.</p>
             </div>
         </div>
     </footer>

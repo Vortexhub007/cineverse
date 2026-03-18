@@ -139,20 +139,6 @@ const API_CONFIG = {
 };
 ```
 
-4. **Lancer l'application**
-   - Ouvrir `index.html` dans un navigateur
-   - Ou utiliser un serveur local :
-   
-```bash
-# Avec Python 3
-python -m http.server 8000
-
-# Avec Node.js (http-server)
-npx http-server
-```
-
----
-
 ## 🎨 Choix de conception
 
 ### Design
